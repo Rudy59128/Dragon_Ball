@@ -1,44 +1,36 @@
+@import "../../Utils.css";
+
 .navbarContainer {
   display: flex;
-  background-color: #074b9c;
-  width: 100%;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  flex-direction: row;
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  justify-content: space-between; /* Espace équitablement les éléments horizontalement */
+  background-color: #074b9c; /* Remplacez ceci par la couleur de fond de votre choix */
+  font-family: var(--font);
   height: 11vh;
-  letter-spacing: 4px;
-  flex-flow: wrap;
 }
 
 .pageLinksContainer {
   display: flex;
-  justify-content: flex-end;
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  gap: 20px; /* Ajoute un espace de 20px entre chaque lien de page */
   list-style-type: none;
-  align-items: center;
-  width: 40%;
-}
-
-.textContainer {
-  margin: 3rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: var(--underTitleSize);
-  text-shadow: var(--textShadow);
-  letter-spacing: 4px;
-  font-weight: bolder;
-}
-
-a {
-  color: white;
   text-decoration: none;
 }
 
-.logonav {
-  width: 40%;
-  margin-left: 3rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: red;
-  text-shadow: 3px 3px 6px black;
-  font-size: 3rem;
-  font-weight: bolder;
+.textContainer {
+  color: white; /* Couleur du texte des liens de la page */
+  text-decoration: none; /* Supprime le soulignement par défaut des liens */
+  list-style-type: none;
+  font-weight: bold; /* Texte en gras pour les liens de la page */
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.activeLink {
+  /* Styles pour le lien actif (page active) */
+  color: yellow; /* Couleur du texte pour le lien actif */
+  text-decoration: none;
 }
