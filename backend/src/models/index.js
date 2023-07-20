@@ -29,9 +29,24 @@ pool.getConnection().catch(() => {
 
 const models = {};
 
-const ItemManager = require("./ItemManager");
+const CharacterManager = require("./CharacterManager");
 
-models.item = new ItemManager();
+models.item = new CharacterManager();
+models.item.setDatabase(pool);
+
+const GalleryManager = require("./GalleryManager");
+
+models.item = new GalleryManager();
+models.item.setDatabase(pool);
+
+const TimelineManager = require("./TimelineManager");
+
+models.item = new TimelineManager();
+models.item.setDatabase(pool);
+
+const StoryManager = require("./StoryManager");
+
+models.item = new StoryManager();
 models.item.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,

@@ -1,0 +1,44 @@
+.navbarContainer {
+  display: flex;
+  background-color: #074b9c;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 11vh;
+  letter-spacing: 4px;
+  flex-flow: wrap;
+}
+
+.pageLinksContainer {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  align-items: center;
+  width: 40%;
+}
+
+.textContainer {
+  margin: 3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: var(--underTitleSize);
+  text-shadow: var(--textShadow);
+  letter-spacing: 4px;
+  font-weight: bolder;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.logonav {
+  width: 40%;
+  margin-left: 3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: red;
+  text-shadow: 3px 3px 6px black;
+  font-size: 3rem;
+  font-weight: bolder;
+}

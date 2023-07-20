@@ -1,8 +1,16 @@
 const AbstractManager = require("./AbstractManager");
 
-class ItemManager extends AbstractManager {
+class TimelineManager extends AbstractManager {
   constructor() {
-    super({ table: "item" });
+    super({ table: "timeline" });
+  }
+
+  findAllTimeline() {
+    return this.database.query(`SELECT * FROM ${this.table}`);
+  }
+
+  findTimeline(id) {
+    return this.database.query(`SELECT * FROM ${this.table}`, id);
   }
 
   insert(item) {
@@ -19,4 +27,4 @@ class ItemManager extends AbstractManager {
   }
 }
 
-module.exports = ItemManager;
+module.exports = TimelineManager;

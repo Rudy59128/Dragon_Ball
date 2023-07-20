@@ -2,12 +2,23 @@ const express = require("express");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
+const characterControllers = require("./controllers/characterControllers");
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+router.get("/characters", characterControllers.browse);
+router.get("/characters/:id", characterControllers.read);
+
+const timelineControllers = require("./controllers/timelineControllers");
+
+router.get("/timeline", timelineControllers.browse);
+router.get("/timeline/:id", timelineControllers.read);
+
+const storyControllers = require("./controllers/storyControllers");
+
+router.get("/story", storyControllers.browse);
+router.get("/story/:id", storyControllers.read);
+
+const galleryControllers = require("./controllers/galleryControllers");
+
+router.get("/gallery", galleryControllers.browse);
 
 module.exports = router;
